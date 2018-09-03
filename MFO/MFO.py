@@ -1,3 +1,4 @@
+import numpy as np
 from TestFunction import TestFunction
 
 
@@ -14,41 +15,71 @@ class MFO:
         self.size = size
         self.max_iter = max_iter
         self.problem = problem
+        self.convergence_curve = np.zeros(max_iter)
 
         # 初始化飞蛾种群
-        self.M = problem.generate_feasible_solutions(size)
+        self.moth_pos = problem.generate_feasible_solutions(size)
 
         # 计算种群适应度值
-        self.OM = problem.calculate_fitness_value(self.M)
+        self.moth_fitness = problem.calculate_fitness_value(self.moth_pos)
 
         # 初始化火焰适应度值
-        self.OF = self.OM.copy()
+        self.flame_fitness = self.moth_fitness.copy()
 
         # 火焰排序
-        index = self.OF.argsort()
-        self.OF.sort()
+        index = self.flame_fitness.argsort()
+        self.flame_fitness.sort()
 
         # 初始化火焰
-        self.F = self.M.copy()
-        for i in range(self.OF.shape[0]):
-            self.F[i] = self.M[index[i]]
+        self.flame_pos = self.moth_pos.copy()
+        for i in range(self.flame_pos.shape[0]):
+            self.flame_pos[i] = self.moth_pos[index[i]]
 
     def solve(self):
         """
         求解
         """
 
-        print('MFO is optimizing your problem')
+        iteration = 0
 
-        for i in range(100):
-            print('===%d===' % i)
-            for j in range(self.size):
-                self.population[j].update(self.gBest)
-                if self.problem.compare_fitness_value(self.population[j].fit, self.gFit) > 0:
-                    self.gBest = self.population[j].x.copy()
-                    self.gFit = self.population[j].fit.copy()
-                print('x: %f v: %f fit: %f' % (self.population[j].x, self.population[j].v, self.population[j].fit))
-            print("gBest: %f gFit: %f" % (self.gBest, self.gFit))
+        while iteration < self.max_iter:
+
+            previous_population = self.moth_pos.copy()
+            previous_fitness = self.moth_fitness.copy()
+
+            flame_no = round(self.size - iteration * ((self.size - 1) / self.max_iter))
+            a = -1 - iteration / self.max_iter
+
+            for i in range(self.moth_pos.shape[0]):
+                for j in range(self.moth_pos.shape[1]):
+                    distance_to_flame = abs(self.flame_pos[i][j] - self.moth_pos[i][j])
+                    b = 1
+                    t = (a - 1) * np.random.rand() + 1
+                    if i < flame_no:
+                        self.moth_pos[i][j] = distance_to_flame * np.exp(b * t) * np.cos(t * 2 * np.pi) + \
+                                              self.flame_pos[i][j]
+                    else:
+                        self.moth_pos[i][j] = distance_to_flame * np.exp(b * t) * np.cos(t * 2 * np.pi) + \
+                                              self.flame_pos[flame_no][j]
+
+            self.moth_fitness = self.problem.calculate_fitness_value(self.moth_pos)
+
+            double_population = np.append(previous_population, self.moth_pos, axis=0)
+            double_fitness = np.append(previous_fitness, self.moth_fitness)
+
+            index = double_fitness.argsort()
+            double_fitness.sort()
+
+            self.flame_fitness = double_fitness[0:self.size].copy()
+            for i in range(self.flame_pos.shape[0]):
+                self.flame_pos[i] = double_population[index[i]]
+
+            self.convergence_curve[iteration] = double_fitness[0]
+
+            if np.mod(iteration + 1, 50) == 0:
+                print('At iteration %d the best fitness is %f' % (iteration + 1, self.convergence_curve[iteration]))
+
+            iteration += 1
 
 
 def test():
@@ -61,16 +92,18 @@ def test():
     mfo = MFO(30, 1000, problem)
 
     print('===M===')
-    print(mfo.M)
+    print(mfo.moth_pos)
 
     print('===OM===')
-    print(mfo.OM)
+    print(mfo.moth_fitness)
 
     print('===F===')
-    print(mfo.F)
+    print(mfo.flame_pos)
 
     print('===OF===')
-    print(mfo.OF)
+    print(mfo.flame_fitness)
+
+    mfo.solve()
 
 
 if __name__ == '__main__':

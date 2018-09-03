@@ -29,9 +29,23 @@ class TestFunction:
 
         return x
 
+    def calculate_fitness_value(self, x):
+        """
+        计算目标函数值
+        :param x: 自变量
+        :return: 函数值
+        """
+
+        y = self.func(x)
+
+        return y
+
     @staticmethod
     def F1(x):
-        return (x ** 2).sum()
+        y = np.zeros(x.shape[0])
+        for i in range(x.shape[0]):
+            y[i] = (x[i] ** 2).sum()
+        return y
 
 
 def test():

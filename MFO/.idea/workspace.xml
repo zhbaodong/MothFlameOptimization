@@ -48,21 +48,25 @@
     <session id="927543928">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="1010" />
-          <entry key="py" value="518" />
+          <entry key="Python Console" value="2308" />
+          <entry key="py" value="1191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1528" />
+          <entry key="Python" value="3499" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -82,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sphere.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="68" selection-start-line="68" selection-end-line="69" selection-end-column="10" />
+            <state relative-caret-position="475">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="11" />
               <folding>
                 <marker date="1534855049029" expanded="true" signature="114:196" ph="..." />
                 <marker date="1534855049029" expanded="true" signature="925:1160" ph="..." />
@@ -92,24 +96,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+            <state relative-caret-position="863">
+              <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
-                <marker date="1535277021195" expanded="true" signature="40:45" ph="..." />
-                <marker date="1535277021195" expanded="true" signature="733:738" ph="..." />
+                <marker date="1535549720224" expanded="true" signature="40:45" ph="..." />
+                <marker date="1535549720224" expanded="true" signature="698:831" ph="..." />
+                <marker date="1535549720224" expanded="true" signature="996:1001" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MFO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state relative-caret-position="882">
+              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +141,8 @@
         <option value="$PROJECT_DIR$/Particle.py" />
         <option value="$PROJECT_DIR$/Sphere.py" />
         <option value="$PROJECT_DIR$/../对数螺旋线/LogarithmicSpiral.py" />
-        <option value="$PROJECT_DIR$/MFO.py" />
         <option value="$PROJECT_DIR$/TestFunction.py" />
+        <option value="$PROJECT_DIR$/MFO.py" />
       </list>
     </option>
   </component>
@@ -188,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TestFunction">
+  <component name="RunManager" selected="Python.MFO">
     <configuration name="LogarithmicSpiral" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MFO" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -303,8 +311,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TestFunction" />
         <item itemvalue="Python.MFO" />
+        <item itemvalue="Python.TestFunction" />
         <item itemvalue="Python.Sphere" />
         <item itemvalue="Python.LogarithmicSpiral" />
         <item itemvalue="Python.main" />
@@ -335,21 +343,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24968314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49936628" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49873257" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32974428" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006337" side_tool="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50126743" side_tool="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49936628" weight="0.32974428" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -423,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sphere.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="68" selection-start-line="68" selection-end-line="69" selection-end-column="10" />
+        <state relative-caret-position="475">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="11" />
           <folding>
             <marker date="1534855049029" expanded="true" signature="114:196" ph="..." />
             <marker date="1534855049029" expanded="true" signature="925:1160" ph="..." />
@@ -432,20 +441,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MFO.py">
+    <entry file="file://$PROJECT_DIR$/TestFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="863">
+          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <marker date="1535549720224" expanded="true" signature="40:45" ph="..." />
+            <marker date="1535549720224" expanded="true" signature="698:831" ph="..." />
+            <marker date="1535549720224" expanded="true" signature="996:1001" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestFunction.py">
+    <entry file="file://$PROJECT_DIR$/MFO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+        <state relative-caret-position="882">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
           <folding>
-            <marker date="1535277021195" expanded="true" signature="40:45" ph="..." />
-            <marker date="1535277021195" expanded="true" signature="733:738" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
